@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+
+<head>
+    <title>Logistics Project</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Inventory</a></h1>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="styleshee\ t">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </header>
+    <div>
+        {% block content %}
+        {% endblock content %} </div>
+</body>
+
+</html>
