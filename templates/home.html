@@ -4,6 +4,7 @@
 <div class="item-entry">
     <h2><a href="{% url 'item_detail' item.pk %}">{{ item.type }}</a></h2>
     <p>{{ item.brand }}</p>
+    <p>{{ item.location }}</p>
     <p>Unit count: {{item.unit_Count}}</p>
     <p>Weight per unit: {{item.unit_weight}}</p>
 </div>

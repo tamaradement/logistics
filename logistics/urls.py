@@ -5,6 +5,9 @@ from .views import (
     ItemCreateView,
     ItemUpdateView,
     ItemDeleteView,
+    WarehouseListView,
+    # WarehouseDetailView,
+    WarehouseCreateView,
 )
 
 urlpatterns = [
@@ -13,4 +16,9 @@ urlpatterns = [
     path("item/<int:pk>/edit/", ItemUpdateView.as_view(), name="item_edit"),
     path("item/<int:pk>/delete/", ItemDeleteView.as_view(), name="item_delete"),
     path("", ItemListView.as_view(), name="home"),
+    path("warehouses", WarehouseListView.as_view(), name="warehouse_list"),
+    # path(
+    #     "warehouses/<int:pk>/", WarehouseDetailView.as_view(), name="warehouse_detail"
+    # ),
+    path("new/", WarehouseCreateView.as_view(), name="warehouse_new"),
 ]

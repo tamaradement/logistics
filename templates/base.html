@@ -10,7 +10,9 @@
     <div>
         <header>
             <div class="nav-left">
-                <h1><a href="{% url 'home' %}">Inventory</a></h1>
+                <h1><a href="{% url 'home' %}">Inventory : </a> <a href="{% url 'warehouse_list' %}">Warehouse
+                        Locations</a></h1>
+
             </div>
             <div class="nav-right">
                 <a href="{% url 'item_new' %}">+ Add new item</a>
