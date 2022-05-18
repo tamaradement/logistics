@@ -6,8 +6,10 @@ from .views import (
     ItemUpdateView,
     ItemDeleteView,
     WarehouseListView,
-    # WarehouseDetailView,
+    WarehouseDetailView,
     WarehouseCreateView,
+    WarehouseUpdateView,
+    WarehouseDeleteView,
 )
 
 urlpatterns = [
@@ -17,8 +19,18 @@ urlpatterns = [
     path("item/<int:pk>/delete/", ItemDeleteView.as_view(), name="item_delete"),
     path("", ItemListView.as_view(), name="home"),
     path("warehouses", WarehouseListView.as_view(), name="warehouse_list"),
-    # path(
-    #     "warehouses/<int:pk>/", WarehouseDetailView.as_view(), name="warehouse_detail"
-    # ),
+    path(
+        "warehouses/<int:pk>/", WarehouseDetailView.as_view(), name="warehouse_detail"
+    ),
     path("new/", WarehouseCreateView.as_view(), name="warehouse_new"),
+    path(
+        "warehouses/<int:pk>/edit/",
+        WarehouseUpdateView.as_view(),
+        name="warehouse_edit",
+    ),
+    path(
+        "warehouses/<int:pk>/delete/",
+        WarehouseDeleteView.as_view(),
+        name="warehouse_delete",
+    ),
 ]

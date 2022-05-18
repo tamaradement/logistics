@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<a href="{% url 'warehouse_new'%}">Add warehouse</a>
+<a href="{% url 'warehouse_new'%}">+ Add warehouse</a>
 {% for warehouse in object_list %}
 <div class="item-entry">
-    <h2><a href="#">{{ warehouse.name }}</a></h2>
-    <p>{{ warehouse.city }}</p>
-    <p>{{ warehouse.state }}</p>
+    <h2><a href="{% url 'warehouse_detail' warehouse.pk %}">{{ warehouse.name }}</a></h2>
+    <p>{{ warehouse.city }}, {{ warehouse.state }}</p>
 </div>
+
+
 {% endfor %}
 {% endblock content %}

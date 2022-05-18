@@ -2,7 +2,6 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Item, Warehouse
-from .forms import WarehouseForm
 
 
 class ItemListView(ListView):
@@ -38,8 +37,26 @@ class WarehouseListView(ListView):
     template_name = "warehouse_list.html"
 
 
+class WarehouseDetailView(DetailView):
+    model = Warehouse
+    template_name = "warehouse_detail.html"
+
+
 class WarehouseCreateView(CreateView):
     model = Warehouse
     template_name = "warehouse_new.html"
     fields = ["name", "city", "state"]
+    success_url = reverse_lazy("warehouse_list")
+
+
+class WarehouseUpdateView(UpdateView):
+    model = Warehouse
+    template_name = "warehouse_edit.html"
+    fields = ["name", "city", "state"]
+    success_url = reverse_lazy("warehouse_list")
+
+
+class WarehouseDeleteView(DeleteView):
+    model = Warehouse
+    template_name = "warehouse_delete.html"
     success_url = reverse_lazy("warehouse_list")
