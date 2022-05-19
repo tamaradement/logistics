@@ -1,28 +1,28 @@
-Shopify: Backend Developer Intern Challenge Question
-Intern candidate: Tamara deMent
+    Shopify: Backend Developer Intern Challenge Question
+    Intern candidate: Tamara deMent
 
-Inventory tracking web application 
-    Data structure:
-        Objects:
-            - Warehouse
-            - Item
-        Properties:
-            - Warehouse
-                - name
-                - city 
-                - state
-            - Item:
-                - type
-                - brand
-                - unit_Count
-                - unit_weight
-                - location (Warehouse, foreign key)
-        Relationship: 
-            - Warehouse/Item: One to many
-                - A warehouse can have many items (>=0)
-                - An item belongs to one warehouse (=1)
-        Deletion:
-            - When a warehouse is deleted, items stored at that location(warehouse) are also deleted.
+    Inventory tracking web application 
+        Data structure:
+            Objects:
+                - Warehouse
+                - Item
+            Properties:
+                - Warehouse
+                    - name
+                    - city 
+                    - state
+                - Item:
+                    - type
+                    - brand
+                    - unit_Count
+                    - unit_weight
+                    - location (Warehouse, foreign key)
+            Relationship: 
+                - Warehouse/Item: One to many
+                    - A warehouse can have many items (>=0)
+                    - An item belongs to one warehouse (=1)
+            Deletion:
+                - When a warehouse is deleted, items stored at that location(warehouse) are also deleted.
 
     App requirements:
         [X] Create inventory items
