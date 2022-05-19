@@ -36,6 +36,7 @@ Inventory tracking web application
         [ ] Ability to create “shipments” and assign inventory to the shipment, and adjust inventory appropriately
 
     Demo link:
+        https://www.loom.com/share/26653479039b4240b9f38325a6cb5876
 
     Ideas for new features:
         [ ] Make inventory list items filterable by warehouse.
