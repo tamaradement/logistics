@@ -2,13 +2,35 @@ Shopify: Backend Developer Intern Challenge Question
 Intern candidate: Tamara deMent
 
 Inventory tracking web application 
-    Requirements:
+    Data structure:
+        Objects:
+            - Warehouse
+            - Item
+        Properties:
+            - Warehouse
+                - name
+                - city 
+                - state
+            - Item:
+                - type
+                - brand
+                - unit_Count
+                - unit_weight
+                - location (Warehouse, foreign key)
+        Relationship: 
+            - Warehouse/Item: One to many
+                - A warehouse can have many items (>=0)
+                - An item belongs to one warehouse (=1)
+        Deletion:
+            - When a warehouse is deleted, items stored at that location(warehouse) are also deleted.
+
+    App requirements:
         [X] Create inventory items
         [X] Edit Them
         [X] Delete Them
         [X] View a list of them
 
-    Additional feature:
+    Additional features:
         [ ] When deleting, allow deletion comments and undeletion.
         [X] Ability to create warehouses/locations and assign inventory to specific locations.
         [ ] Ability to create “shipments” and assign inventory to the shipment, and adjust inventory appropriately
